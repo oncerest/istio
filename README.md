@@ -1,3 +1,7 @@
 # istio
 
-kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
+## notes running istio on k8s/docker desktop
+
+https://github.com/kubernetes/dashboard
+kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | awk '/default-token/ {print $1}')
+
