@@ -19,4 +19,9 @@ for token to access dashboard, grab one from `kubectl -n kube-system describe se
 
 install istio from https://github.com/istio/istio/releases
 
+register istio crd **CustomResourceDefinitions**
+```
+for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f $i; done
+kubectl  get crd
+```
 
