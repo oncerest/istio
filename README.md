@@ -2,9 +2,7 @@
 
 ## notes running istio on k8s/docker desktop
 
-install docker desktop
-
-verify by `docker run hello-world`
+install docker desktop, verify by `docker run hello-world`
 
 enable k8s https://docs.docker.com/docker-for-windows/#kubernetes
 
