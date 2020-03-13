@@ -63,5 +63,19 @@ NAME                                                   CDS        LDS        EDS
 istio-egressgateway-67f444d69-kddzl.istio-system       SYNCED     SYNCED     SYNCED     NOT SENT     istio-pilot-bb4bc587f-9j4ch     1.5.0
 istio-ingressgateway-7cc859b7c8-wdjt8.istio-system     SYNCED     SYNCED     SYNCED     NOT SENT     istio-pilot-bb4bc587f-9j4ch     1.5.0
 ```
+label default namespace with `kubectl label namespace default istio-injection=enable`
 
+deploy sample `kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml`
+```
+kubectl describe po reviews-v1-64bc5454b9-685xh
+  istio-proxy:
+    Container ID:  docker://a4ad762ff638a0941370368c1989418c16944de72f5720a934316d29580c925e
+    Image:         docker.io/istio/proxyv2:1.5.0
+    Image ID:      docker-pullable://istio/proxyv2@sha256:89b5fe2df96920189a193dd5f7dbd776e00024e4c1fd1b59bb53867278e9645a
+    Port:          15090/TCP
+    Host Port:     0/TCP
+    Args:
+      proxy
+      sidecar
+```
 
