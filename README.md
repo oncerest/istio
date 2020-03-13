@@ -88,4 +88,4 @@ virtualservice.networking.istio.io/bookinfo created
 ```
 
 ## demo url
-`http://localhost/productpage`
+http://localhost/productpage
