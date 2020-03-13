@@ -56,4 +56,12 @@ virtualservices.networking.istio.io        2020-03-12T13:02:42Z
 
 install istio demo `kubectl apply -f install/kubernetes/istio-demo.yaml`
 
+verify with `kubectl get svc -n istio-system` and `kubectl get po -n istio-system`
+```
+istioctl proxy-status
+NAME                                                   CDS        LDS        EDS        RDS          PILOT                           VERSION
+istio-egressgateway-67f444d69-kddzl.istio-system       SYNCED     SYNCED     SYNCED     NOT SENT     istio-pilot-bb4bc587f-9j4ch     1.5.0
+istio-ingressgateway-7cc859b7c8-wdjt8.istio-system     SYNCED     SYNCED     SYNCED     NOT SENT     istio-pilot-bb4bc587f-9j4ch     1.5.0
+```
+
 
