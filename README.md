@@ -87,3 +87,5 @@ gateway.networking.istio.io/bookinfo-gateway created
 virtualservice.networking.istio.io/bookinfo created
 ```
 
+## demo url
+`http://localhost/productpage`
