@@ -1,6 +1,6 @@
-# istio
+# notes running istio on k8s/docker desktop
 
-## notes running istio on k8s/docker desktop
+## setup docker and k8s
 
 install docker desktop, verify by `docker run hello-world`
 
@@ -14,6 +14,8 @@ kubectl get nodes
 install k8s dashboard https://github.com/kubernetes/dashboard
 
 for token to access dashboard, grab one from `kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | awk '/default-token/ {print $1}')`
+
+## setup istio
 
 install istio from https://github.com/istio/istio/releases
 
@@ -77,5 +79,11 @@ kubectl describe po reviews-v1-64bc5454b9-685xh
     Args:
       proxy
       sidecar
+```
+setup istio ingress gateway
+```
+kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
+gateway.networking.istio.io/bookinfo-gateway created
+virtualservice.networking.istio.io/bookinfo created
 ```
 
