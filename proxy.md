@@ -78,4 +78,15 @@ kubectl exec ratings-v1-7855f5bcb9-cnzpr -c istio-proxy ps
    30 ?        00:00:00 ps
    
 kubectl exec -it $(kubectl get pod | grep productpage | awk '{ print $1 }') -c istio-proxy cat /etc/certs/cert-chain.pem |openssl x509 -text -noout
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            e8:6d:40:3f:c1:28:f9:66:8f:5f:f9:85:58:b3:9f:9a
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: O = cluster.local
+        Validity
+            Not Before: Mar 13 05:45:27 2020 GMT
+            Not After : Jun 11 05:45:27 2020 GMT
+
 ```
