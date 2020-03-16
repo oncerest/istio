@@ -18,3 +18,4 @@ istioctl authn
 istioctl proxy-config <bootstrap | listener | route | cluster>     <kubernetes pod>::
 istioctl proxy-status
 
+`kubectl -n istio-system get cm istio -o jsonpath="{@.data.mesh}"`
